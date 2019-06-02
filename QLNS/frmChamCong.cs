@@ -22,7 +22,7 @@ namespace QuanLiNhanSu
         {
             InitializeComponent();
         }
-
+///Linh xinh đẹp
         private void buttonX5_Click(object sender, EventArgs e)
         {
             this.Close();
