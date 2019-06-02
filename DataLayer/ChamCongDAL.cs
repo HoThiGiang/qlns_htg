@@ -46,7 +46,7 @@ namespace DataLayer
             string Query = "delete ChamCong where MaNV='" + chamcong._MaNV + "'";
             return Query;
         }
-        //
+        //Lấy danh sách chấm công
         public DataTable LayDanhSachChamCong()
         {
             SqlCommand cmd = new SqlCommand("select * from NhanVien");
