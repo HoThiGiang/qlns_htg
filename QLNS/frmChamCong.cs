@@ -27,6 +27,7 @@ namespace QuanLiNhanSu
         {
             this.Close();
         }
+        //abc
 
         private void frmChamCong_Load(object sender, EventArgs e)
         {
