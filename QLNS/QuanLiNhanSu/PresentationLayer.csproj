@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DEF948C-1900-49AC-A3A1-FBDD8A6AA269}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLiNhanSu</RootNamespace>
+    <AssemblyName>QuanLiNhanSu</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.28, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="batLoi.cs" />
+    <Compile Include="DevComponents\DotNetBar\Office2007RibbonForms.cs" />
+    <Compile Include="frmChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChamCong.Designer.cs">
+      <DependentUpon>frmChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKi.Designer.cs">
+      <DependentUpon>frmDangKi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHeThongNhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHeThongNhanSu.Designer.cs">
+      <DependentUpon>frmHeThongNhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTangLuong.Designer.cs">
+      <DependentUpon>frmTangLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThaiSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThaiSan.Designer.cs">
+      <DependentUpon>frmThaiSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimKiem.Designer.cs">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTroGiup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTroGiup.Designer.cs">
+      <DependentUpon>frmTroGiup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTTCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTTCaNhan.Designer.cs">
+      <DependentUpon>frmTTCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhongBan.Designer.cs">
+      <DependentUpon>PhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLiNhanSuDataSet.cs">
+      <DependentUpon>QuanLiNhanSuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSuDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSuDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSuDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSuDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSuDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSuDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet12.cs">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNhanSu_BTLDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSu_BTLDataSet9.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmChamCong.resx">
+      <DependentUpon>frmChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangKi.resx">
+      <DependentUpon>frmDangKi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHeThongNhanSu.resx">
+      <DependentUpon>frmHeThongNhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTangLuong.resx">
+      <DependentUpon>frmTangLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThaiSan.resx">
+      <DependentUpon>frmThaiSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimKiem.resx">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTroGiup.resx">
+      <DependentUpon>frmTroGiup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTTCaNhan.resx">
+      <DependentUpon>frmTTCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhongBan.resx">
+      <DependentUpon>PhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuanLiNhanSuDataSet.xsc">
+      <DependentUpon>QuanLiNhanSuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSuDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSuDataSet.xss">
+      <DependentUpon>QuanLiNhanSuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSuDataSet1.xsc">
+      <DependentUpon>QuanLiNhanSuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSuDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSuDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSuDataSet1.xss">
+      <DependentUpon>QuanLiNhanSuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSuDataSet2.xsc">
+      <DependentUpon>QuanLiNhanSuDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSuDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSuDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSuDataSet2.xss">
+      <DependentUpon>QuanLiNhanSuDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSuDataSet3.xsc">
+      <DependentUpon>QuanLiNhanSuDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSuDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSuDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSuDataSet3.xss">
+      <DependentUpon>QuanLiNhanSuDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet1.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet1.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet10.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet10.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet11.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet11.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet12.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet12.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet13.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet13.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet14.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet14.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet15.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet15.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet16.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet16.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet17.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet17.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet18.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet18.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet19.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet19.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet2.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet2.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet20.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet20.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet21.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet21.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet22.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet22.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet23.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet23.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet24.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet24.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet25.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet25.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet26.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet26.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet27.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet27.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet3.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet3.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet4.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet4.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet5.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet5.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet6.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet6.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet7.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet7.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet8.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet8.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet9.xsc">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSu_BTLDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSu_BTLDataSet9.xss">
+      <DependentUpon>QuanLiNhanSu_BTLDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\afsadfdafdfaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\capnhat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\133.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lgin copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon0119.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon029.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoadon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon0019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhanvien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ccc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1269515091_keepassx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1269448502_administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1270361629_administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DanToc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TinhLuong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phongban.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\www.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button3.Image.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1269825271_system-help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timkiem.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QLNhanvien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL2\BLL2.csproj">
+      <Project>{3c23fb6f-a481-429f-a78a-a8f0e26663e2}</Project>
+      <Name>BLL2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataAccessLayer.csproj">
+      <Project>{d46207dd-f08e-4efe-a916-525ddff12e71}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataTransferObject\DataTransferObject.csproj">
+      <Project>{33a5db74-b814-4422-85e0-3fe7df6b144b}</Project>
+      <Name>DataTransferObject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tim1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
