@@ -12,6 +12,8 @@ namespace DataLayer
     public class ChamCongDAL
     {
         DBConnection da = new DBConnection();
+
+        //Lấy danh sách chấm công
         public DataTable GetAllChamCong()
         {
             SqlCommand cmd = new SqlCommand("select * from ChamCong");
