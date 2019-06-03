@@ -9,6 +9,7 @@ using DataTransferObject;
 
 namespace DataLayer
 {
+    //Truy vấn  dữ liệu từ data base
     public class ChamCongDAL
     {
         DBConnection da = new DBConnection();
