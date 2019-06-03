@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
+    //Xây dựng đối tượng chấm công với các thuộc tính sau
     public class DTO_ChamCong
     {
         private int MaNV;
