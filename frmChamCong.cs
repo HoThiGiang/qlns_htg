@@ -13,6 +13,7 @@ using BLL2;
 
 namespace QuanLiNhanSu
 {
+    //Xây dựng form Chấm công
     public partial class frmChamCong : Form
     {
         ChamCongDTO chamcongdto = new ChamCongDTO();

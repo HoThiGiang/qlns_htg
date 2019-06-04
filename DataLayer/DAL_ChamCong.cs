@@ -11,6 +11,7 @@ namespace DataLayer
 {
     public class DAL_ChamCong: DBConnection
     {
+        //Lấy ra danh sách chấm công
         public DataTable getAllCC()
         {
             SqlDataAdapter dataAdapter = new SqlDataAdapter("select * from ChamCong", Conn);

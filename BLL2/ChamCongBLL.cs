@@ -10,6 +10,7 @@ using DataTransferObject;
 //
 namespace BLL2
 {
+    //
     public class ChamCongBLL
     {
         ChamCongDAL cc = new ChamCongDAL();
