@@ -34,6 +34,7 @@ namespace DataLayer
             string query = "insert into ChamCong(MaNV,Thang, Nam, SoNgayCong, SoNgayNghi) values('"+chamcong._MaNV+"','"+chamcong._Thang+"','"+chamcong._Nam+"','"+chamcong._SoNgayCong+"','"+chamcong._SoNgayNgi+"') ";
             return query;
         }
+        //Sửa lại
         //Sửa thông tin cá nhân
         public string UpdateChamCong(ChamCongDTO chamcong)
         {
@@ -46,7 +47,7 @@ namespace DataLayer
             string Query = "delete ChamCong where MaNV='" + chamcong._MaNV + "'";
             return Query;
         }
-        //
+        //Lấy danh sách chấm công
         public DataTable LayDanhSachChamCong()
         {
             SqlCommand cmd = new SqlCommand("select * from NhanVien");
